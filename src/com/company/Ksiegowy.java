@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ksiegowy extends Pracownik implements AkcjePracownicze {
 
-    Scanner pobierzString = new Scanner(System.in);
+    private Scanner pobierzString = new Scanner(System.in);
 
     @Override
     public void dodaj() {

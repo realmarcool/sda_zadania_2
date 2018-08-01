@@ -2,11 +2,11 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Oddzialy {
+class Oddzialy {
     String oddzial;
     Scanner pobierzInt = new Scanner(System.in);
 
-    public String podajOddzial() {
+    String podajOddzial() {
         System.out.println("Podaj oddział:");
         System.out.println("1 - SZCZECIN");
         System.out.println("2 - WROCŁAW");

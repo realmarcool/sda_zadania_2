@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Prezes extends Pracownik implements AkcjePracownicze{
     String dodatkowePolePrezesa;
-    Scanner pobierzString = new Scanner(System.in);
+    private Scanner pobierzString = new Scanner(System.in);
     @Override
     public void dodaj() {
         System.out.println("Podaj imię:");
