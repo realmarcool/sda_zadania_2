@@ -1,10 +1,11 @@
 package com.company;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
 
     private static void menu() {
@@ -51,6 +52,19 @@ public class Main {
         int id;
         String text;
         boolean istnieje = false;
+        List<String> listaZPliku = Plik.odczytZPliku;
+        for (String string: listaZPliku){
+            if (!string.equals("pusta")){
+               // switch ()
+
+                //tu jedziemy z koksem
+
+
+
+
+            }
+        }
+
         while (wybor != 6) {
             menu();
             wybor = pobierzInt.nextInt();
@@ -271,6 +285,22 @@ public class Main {
                     System.out.println("Błąd wyboru, podaj właściwą liczbę!");
 
 
+            }
+            try {
+                FileWriter plik = new FileWriter("plik.txt");
+               for (Pracownik lista: listaPracownikow){
+                   plik.write(lista.stanowisko + "\r\n");
+                   plik.write(lista.id + "\r\n");
+                   plik.write(lista.imie + "\r\n");
+                   plik.write(lista.nazwisko + "\r\n");
+                   plik.write(lista.adres + "\r\n");
+                   plik.write(lista.oddzial + "\r\n");
+                   plik.write("-----\r\n");
+               }
+               plik.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
 
